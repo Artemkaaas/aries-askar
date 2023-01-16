@@ -89,7 +89,7 @@ impl<B: Backend> Store<B> {
     }
 
     /// Close the store instance, waiting for any shutdown procedures to complete.
-    pub async fn close(self) -> Result<(), Error> {
+    pub async fn close(&self) -> Result<(), Error> {
         Ok(self.0.close().await?)
     }
 

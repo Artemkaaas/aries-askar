@@ -48,7 +48,7 @@ mod ffi;
 pub mod kms;
 
 mod protect;
-pub use protect::{generate_raw_store_key, PassKey, StoreKeyMethod};
+pub use protect::{generate_raw_store_key, PassKey, StoreKeyMethod, kdf::{KdfMethod, Argon2Level}};
 
 mod storage;
 pub use storage::{Entry, EntryTag, Scan, Store, TagFilter};
